@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7d57b5724e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Staatliches">
+    <title>Ros&eacute;tte Cupcakes</title>
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="brand">
+            <img src="img/rosette-logo-100.png" alt="Ros&eacute;tte" class="logo" />
+            <h3>Ros&eacute;tte Cupcakes</h3>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank"><img src="img/social/facebook-100.png" alt=""></a>
+            <a href="https://instagram.com" target="_blank"><img src="img/social/instagram-100.png" alt=""></a>
+            <a href="https://whatsup.com" target="_blank"><img src="img/social/whatsup-100.png" alt=""></a>    
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="gallery.html" class="current">Galeria</a></li>
+            <li><a href="about.html">Empresa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery -->
+    <main id="gallery">
+        <div class="gallery-images-videos">
+            <!-- Images -->
+            <section id="images">
+                <h1>Imagenes</h1>
+                <div class="gallery-container">
+                    <!-- Image items -->
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/daisies.jpg">
+                        <img src="img/gallery/daisies.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/green-box.jpg">
+                        <img src="img/gallery/green-box.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/green-box2.jpg">
+                        <img src="img/gallery/green-box2.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/quad-pic-mix-cupcakes.jpg">
+                        <img src="img/gallery/quad-pic-mix-cupcakes.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/red-lace-bouquet-closeup.jpg">
+                        <img src="img/gallery/red-lace-bouquet-closeup.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/red-tulips.jpg">
+                        <img src="img/gallery/red-tulips.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/roses-box.jpg">
+                        <img src="img/gallery/roses-box.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/yellow-bouquet.jpg">
+                        <img src="img/gallery/yellow-bouquet.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/rose-lace-bouquet.jpg">
+                        <img src="img/gallery/rose-lace-bouquet.jpg" alt="">
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="img/gallery/red-lace-bouquet-closeup.jpg">
+                        <img src="img/gallery/red-lace-bouquet-closeup.jpg" alt="">
+                    </div>
+
+                    <!-- Add more images as needed -->
+
+                </div>
+            </section>
+
+            <!-- Videos -->
+            <section id="videos">
+                <h1>Videos</h1>
+                <div class="gallery-container">
+                    <!-- Video items -->
+                    <div class="gallery-item" data-type="video" data-src="videos/video1.mp4">
+                        <video preload="metadata" muted>
+                            <source src="videos/video1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!-- Add more videos as needed -->
+
+                </div>
+            </section>
+        </div>
+
+        <!-- When image or video is clicked it's displayed in a modal box -->
+        <section id="lightbox-modal">
+            <!-- The Lightbox Modal -->
+            <div id="lightbox" class="lightbox">
+                <span class="close-btn">&times;</span>
+                <div class="lightbox-content">
+                    <!-- Content (image or video) will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="main-footer" class="py-2">
+        <div class="container footer-container">
+            <div>
+                <div class="brand">
+                    <img src="img/rosette-logo-100.png" alt="Ros&eacute;tte">
+                    <h3><span>Ros&eacute;tte Cupcakes</span></h3>
+                </div>
+                <p>
+                    El término cupcake se documentó por primera vez en 1828, en el libro de cocina
+                    de la autora estadounidense <span>Eliza Leslie</span>, titulado <span>Seventy-five Recipes for
+                    Pastry, Cakes, and Sweetmeats.</span>
+                </p>
+            </div>
+            <div>
+                <h3>Suscr&iacute;bete</h3>
+                <p>
+                    Suscr&iacute;bete con nosotros para que te pongas al d&iacute;a con nuestros
+                    nuevos productos. Tambi&eacute;n te enviaremos ofertas.
+                </p>
+                <form name="contact" action="index.html" method="get" data-netlify="true">
+                    <input type="email" name="email" placeholder="Correo Electronico...">
+                    <input type="submit" value="Suscr&iacute;beme" class="btn btn-primary">
+                </form>
+            </div>
+            <div>
+                <h3>Enlaces Sociales</h3>
+                <ul class="list">
+                    <li>
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="img/social/facebook-100.png" alt="">
+                            <span>facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="img/social/instagram-100.png" alt="">
+                            <span>instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://whatsup.com" target="_blank">
+                            <img src="img/social/whatsup-100.png" alt="">
+                            <span>whatsup</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cupcakes Club</h3>
+                <p>
+                    &Uacute;nete a nuestro club de gente alegre y festejera para que intercambies
+                    ideas para tus celebr&aacute;ciones.
+                </p>
+                <a href="#" class="btn btn-secondary btn-block">&Uacute;neme</a>
+            </div>
+            <div>
+                <p class="copyright">Copyright &copy;<span id="currYear"></span> Ros&eacute;tte Cupcakes</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="js/gallelly.js"></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+/* 
+    To determine the color of text in VS Code, you can use the
+    "Developer: Inspect Editor Tokens and Scopes"
+    Ctrl+Shift+P => Click text
+*/
+
+:root {
+    /* --primary-color: #c72727; */
+    --primary-color: #FF6961;
+    --secondary-color: #f99500;
+    --light-color: hsl(0, 0%, 95%);
+    --dark-color: #333;
+    --max-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.category {
+    --showcase-color: #FF6961;
+    --wedding-color: #FFB6C7;
+    --baby-shower-color: #AAE0F0;
+    --valentine-color: #FF0000;
+    --christmas-color: #146B3A;
+    --birthday-color: #E8D39B;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    background: var(--light-color);
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    margin: .5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+/* Staatliches font has only uppercase letters */
+h1, h2, h3, h4, h5, h5, h6 {
+    font-family: cursive;
+    margin-bottom: .55rem;
+    line-height: 1.3;
+}
+
+/* Utilities */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.category {
+    display: inline-block;
+    color: #fff;
+    font-size: .55rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+}
+
+.category-showcase { background: var(--showcase-color); }
+.category-wedding { background: var(--wedding-color); }
+.category-baby-shower { background: var(--baby-shower-color); }
+.category-valentine { background: var(--valentine-color); }
+.category-christmas { background: var(--christmas-color); }
+.category-birthday { background: var(--birthday-color); }
+
+/* Buttons Base Class */
+.btn {
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 0.5rem 1.5rem;
+    /* border: 5px solid red; */
+}
+
+.btn:hover { opacity: 0.9; }
+
+/* Buttons Modifier Classes
+   Modifier classes must be declared after the base class to be able to override properties */
+.btn-light { background: var(--light-color); }
+.btn-primary { background: var(--primary-color); }
+.btn-secondary { background: var(--secondary-color) }
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Base Class */
+.card {
+    background: #fff;
+    padding: 1rem;
+}
+
+/* Modifier Classes
+   Modifier classes must be declared after the base class to be able to override properties */
+
+.bg-light {
+     background: #fff;         /* var(--light-color); */
+    color: var(--dark-color);    
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: var(--light-color);    
+}
+
+.bg-primary { 
+    background: var(--primary-color); 
+    color: var(--light-color);
+}
+
+.bg-secondary { 
+    background: var(--secondary-color); 
+    color: var(--light-color);
+}
+
+/* Contrast dark color backgrounds with white text  */
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark a,
+.bg-primary h1, .bg-primary h2, .bg-primary h3, .bg-primary a,
+.bg-secondary h1, .bg-secondary h2, .bg-secondary h3, .bg-secondary a {
+    color: #555;
+}
+
+/* Vertical padding Y-axis - Top & Bottom */
+.py-1 { padding: 1.5rem 0; }
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
+
+/* Full Padding X-axis & Y-axis - Top/Bottom & Right/Left */
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.l-heading {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+.list li {
+    padding: .5rem 0;
+    border-bottom: 1px dotted #555;
+    width: 90%;
+}
+
+/* About us inner page grid container */
+.page-container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    margin: 2rem 0;
+    gap: 1.5rem;
+    /* border: 1px solid #00ff00; */
+}
+
+/* Make three rows in the first column
+   The aside column (2nd. column) would have the last two rows empty
+   Extra room for two more aside items */
+
+/* The first column spans three rows */
+.page-container > *:first-child {
+    grid-row: 1 / span 3;
+    /* border: 2px solid blue; */
+}
+
+/* Navigation */
+#main-nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.3rem 0;
+    background: var(--dark-color);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 1px solid #fff;
+}
+
+/* Logo and name */
+#main-nav .brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image */
+#main-nav .brand img {
+    width: 25%;
+    padding-right: 0.5rem;
+}
+
+/* Brand name */
+#main-nav .brand h3 {
+    color: #fff;
+    padding-top: 0.7rem;
+}
+
+/* Social links */
+#main-nav .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding-top: 0.5rem;;
+    /* border: 2px solid red */
+}
+
+/* Social links images */
+#main-nav .social a {
+   width: 12%;
+   opacity: 0.6;
+   /* border: 2px solid red; */
+}
+
+/* Webpage links */
+#main-nav ul {
+    display: flex;
+    justify-self: end;
+    gap: 20px;
+    padding-top: 1.2rem;
+}
+
+#main-nav ul li a {
+    padding: 0.75rem;
+    font-weight: bold;
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+#main-nav ul li a.current {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+#main-nav ul li a:hover {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Showcase */
+#showcase {
+    color: #fff;
+    background: var(--dark-color);
+    padding: 2rem;
+    position: relative;
+}
+
+/* Add background image with an overlay using the ::before element-pseudo-selector */
+/* Cover the surface of the image with text. */
+#showcase::before {
+    content: '';
+    background: url('gerencia.jpg') no-repeat center center/contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
+    justify-content: center;
+    height: 50vh;
+    /* border: 1px solid #0f0; */
+}
+
+#showcase .showcase-content {
+    z-index: 1;
+    /* border: 1px solid #FF00FF; */
+}
+
+#showcase .showcase-content p {
+    margin-bottom: 1rem;
+}
+
+#showcase .showcase-content p span {
+    font-style: italic;
+    font-weight: bold; /* Bold weight, equivalent to 700 */
+    color: #ccc;
+}
+
+/* Home Articles */
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#home-articles .articles-container > * {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+    grid-column: 1 / span 3;
+}
+
+/* Article Page */
+#article .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    padding: 0.5rem;
+}
+
+#article .meta .category {
+    margin-top: 0.4rem;
+}
+
+/* Footer */
+#main-footer {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* Rosette image and name container */
+#main-footer .brand {
+    display: flex;
+    align-items: center;
+}
+
+#main-footer .brand img {
+    width: 15%;
+    padding-right: 0.5rem;
+}
+
+#main-footer .footer-container p span {
+    font-style: italic;
+    font-weight: 500; /* Bold weight, equivalent to 700 */
+    color: #ccc;
+}
+
+/* Subscribe */
+#main-footer .footer-container input[type="email"] {
+    width: 90%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+#main-footer .footer-container input[type="submit"] {
+    width: 90%;
+    cursor: pointer;
+}
+
+/* Social links */
+#main-footer a {
+    color: #fff;
+}
+
+#main-footer .list li a {
+    display: flex;
+    align-items: center;
+} 
+
+#main-footer .list li a span {
+    padding: 10px;
+} 
+
+#main-footer .list li a:hover {
+    color: var(--primary-color);
+}
+
+#main-footer .list li img {
+    width: 15%;
+}
+
+#main-footer .list li span {
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+}
+
+/* Copyright */
+#main-footer .footer-container > *:last-child {
+    grid-column: 1 / span 4;
+    background: #444;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+#main-footer .copyright {
+    font-style: italic;
+    font-weight: 500;
+    color: #ccc;
+}

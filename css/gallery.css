@@ -1,0 +1,100 @@
+/* Basic Styles */
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Divide screen in half for images and videos */
+#gallery .gallery-images-videos {
+    display: flex;
+}
+
+#images,
+#videos {
+  flex: 1; /* Each takes up equal available space within the flex container */
+  width: 50%; /* Explicitly set width to 50% for clarity and older browser support */
+  /* Add other styling for section-one and section-two here */
+  min-height: 200px; /* Example height for visibility */
+  border: 1px solid black; /* Example border */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Text header */
+#gallery h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Gallery Grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Ensures media fills the container without distortion */
+}
+
+/* Lightbox Modal */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex; /* Show the lightbox */
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}

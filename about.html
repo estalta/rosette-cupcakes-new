@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7d57b5724e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Staatliches">
+    <title>Ros&eacute;tte Cupcakes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="brand">
+            <img src="img/rosette-logo-100.png" alt="Ros&eacute;tte" class="logo" />
+            <h3>Ros&eacute;tte Cupcakes</h3>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank"><img src="img/social/facebook-100.png" alt=""></a>
+            <a href="https://instagram.com" target="_blank"><img src="img/social/instagram-100.png" alt=""></a>
+            <a href="https://whatsup.com" target="_blank"><img src="img/social/whatsup-100.png" alt=""></a>    
+        </div>
+        <!-- Burger icon -->
+        <div class="burger-icon" id="burger-icon">
+            <span class="top-span"></span>
+            <span class="mid-span"></span>
+            <span class="bot-span"></span>
+        </div>
+        <!-- Navigation links -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="about.html" class="current">Empresa</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Page Content -->
+    <section id="about">
+        <div class="container">
+            <div class="page-container">
+                <!-- First Column 5fr - Spans 3 Rows (1fr + 1fr + 1fr) -->
+                <article class="card">
+                    <h1 class="l-heading">Ros&eacute;tte Cupcakes</h1>
+                    <h4>Nuestra Mision:</h4>
+                    <p>
+                        Ofrecer cupcakes artesanales de la más alta calidad, utilizando ingredientes
+                        frescos y creativos para deleitar a nuestros clientes y crear momentos
+                        dulces inolvidables, con un servicio que supere las expectativas en cada ocasión.
+                    </p>
+
+                    <h4>Nuestra Vision:</h4>
+                    <p>
+                        Ser reconocidos como la marca líder en cupcakes a nivel nacional, distinguiéndonos
+                        por la calidad superior, la innovación y la capacidad de crear momentos de felicidad
+                        en cada bocado, y así convertirnos en el destino predilecto para quienes buscan
+                        postres únicos, consolidando nuestra marca como sinónimo de sabor, calidad
+                        y exclusividad en el mercado de la repostería..
+                    </p>
+                </article>
+
+                <!-- Second Column 2fr -->
+                <aside class="card bg-light">
+                    <h2>Cupcakes Club</h2>
+                    <p>
+                        &Uacute;nete a nuestro club de gente alegre y festejera para que intercambies
+                        ideas para tus celebr&aacute;ciones.
+                    </p>
+                    <a href="#" class="btn btn-secondary btn-block">&Uacute;neme</a>
+                </aside>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="main-footer" class="py-2">
+        <div class="container footer-container">
+            <div>
+                <div class="brand">
+                    <img src="img/rosette-logo-100.png" alt="Ros&eacute;tte">
+                    <h3><span>Ros&eacute;tte Cupcakes</span></h3>
+                </div>
+                <p>
+                    El término cupcake se documentó por primera vez en 1828, en el libro de cocina
+                    de la autora estadounidense <span>Eliza Leslie</span>, titulado <span>Seventy-five Recipes for
+                    Pastry, Cakes, and Sweetmeats.</span>
+                </p>
+            </div>
+            <div>
+                <h3>Suscr&iacute;bete</h3>
+                <p>
+                    Suscr&iacute;bete con nosotros para que te pongas al d&iacute;a con nuestros
+                    nuevos productos. Tambi&eacute;n te enviaremos ofertas.
+                </p>
+                <form name="contact" action="index.html" method="get" data-netlify="true">
+                    <input type="email" name="email" placeholder="Correo Electronico...">
+                    <input type="submit" value="Suscr&iacute;beme" class="btn btn-primary">
+                </form>
+            </div>
+            <div>
+                <h3>Enlaces Sociales</h3>
+                <ul class="list">
+                    <li>
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="img/social/facebook-100.png" alt="">
+                            <span>facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="img/social/instagram-100.png" alt="">
+                            <span>instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://whatsup.com" target="_blank">
+                            <img src="img/social/whatsup-100.png" alt="">
+                            <span>whatsup</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Cupcakes Club</h3>
+                <p>
+                    &Uacute;nete a nuestro club de gente alegre y festejera para que intercambies
+                    ideas para tus celebr&aacute;ciones.
+                </p>
+                <a href="#" class="btn btn-secondary btn-block">&Uacute;neme</a>
+            </div>
+            <div>
+                <p class="copyright">Copyright &copy;<span id="currYear"></span> Ros&eacute;tte Cupcakes</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="js/common.js"></script>
+    <script>
+        const burgerIcon = document.getElementById('burger-icon');
+        const navLinks = document.getElementById('nav-links');
+
+        // Ensure menu is closed on page load
+        document.onload = () => {           
+            burgerIcon.classList.toggle('toggle', false);
+            navLinks.classList.toggle('active', false);
+            
+        };
+
+        // Animate burger icon and show/hide nav links
+        burgerIcon.addEventListener('click', () => {            
+            burgerIcon.classList.toggle('toggle');
+            navLinks.classList.toggle('active');       
+        });
+    </script>
+</body>
+</html>

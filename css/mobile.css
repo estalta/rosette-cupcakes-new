@@ -1,0 +1,174 @@
+/* Mobile Tablets -> media="screen and (max-width: 768px)" */
+
+/* Navigation */
+#main-nav .social {
+    display: none;
+}
+
+#main-nav .container {
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem;
+}
+
+#main-nav ul,
+#main-nav .logo {
+    justify-self: center;
+}
+
+#main-nav ul li a {
+    padding: 0.5rem;
+}
+
+/* Burger Icon */
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    cursor: pointer;
+    gap: 5px;
+}
+
+/* Create burger icon */
+.burger-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Animate burger icon when clicked */
+.burger-icon.toggle .top-span {
+    position: relative;
+    margin-top: 8px;
+    transform: rotate(225deg);
+}
+
+.burger-icon.toggle .mid-span {
+    display: none;
+}
+.burger-icon.toggle .bot-span {
+    position: relative;
+    margin-top: -8px;
+    transform: rotate(-225deg);
+}
+
+/* Burger menu */
+.nav-links {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;   
+    top: 55px;
+    right: 300;
+    width: 100px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: white;
+    color: black;   
+    transform: translateX(170%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.active {
+    visibility: visible;      
+    position: absolute;
+}
+
+#main-nav ul li a {
+    padding: 0.75rem;
+    font-weight: bold;
+    background: white;
+    color: var(--dark-color);
+}
+
+#main-nav ul li a.current {
+    background: white;
+    color: var(--dark-color);
+}
+
+#main-nav ul li a:hover {
+    background: white;
+    color: var(--dark-color);
+}
+
+/* Home Articles */
+#home-articles .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* The * means any element which is the first child from (>) the immediate children only*/
+#home-articles .articles-container > * {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+
+.l-heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    /* Stack Grid Items */
+    #showcase .showcase-container,
+    #home-articles .articles-container,
+    #main-footer .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    #showcase .showcase-content p {
+        display: -webkit-box;
+        /* No. of lines to show before the ellipsis
+           Clamps three lines */
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    /* Footer copy right section */
+    #main-footer .footer-container > *:last-child {
+        grid-column: 1;
+    }
+
+    /* Place a bottom line divider for the first two children */
+    #main-footer .footer-container > *:first-child,
+    #main-footer .footer-container > *:nth-child(2) {
+        border-bottom: 2px dotted #555;
+        padding-bottom: 1rem;
+    }
+    
+    /* EAL: Extra Styling */
+    #main-footer .footer-container input[type="email"] {
+        width: 100%;
+        padding: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    #main-footer .footer-container input[type="submit"] {
+        width: 100%;
+    }
+
+    /* Join Now button */
+    #main-footer .footer-container .btn.btn-secondary {
+        width: 100%;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    /* About & Article Pages */
+    .page-container {
+        grid-template-columns: 1fr;
+    }
+
+    .page-container article p {
+        text-align: justify;
+    }
+    
+    .page-container > *:first-child {
+       grid-row: 1;
+     }
+    
+    .page-container #categories.card ul {
+        text-align: left;
+    }
+}
